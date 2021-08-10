@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignupForm() {
   const classes = useStyles();
+  // call custom hook here instead of useState
   const [firstName, setFirstName] = useState("");
 
   const handleChanges = e => {

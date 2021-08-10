@@ -3,9 +3,9 @@
 
 import { useState } from "react";
 
-const useLocalStorage = () => {
-    return "something";
-
+const useLocalStorage = (initialValue) => {
+    const [value, setValue] = useState(initialValue);
+    return [value, setValue];
 }
 
-export default useLocalStorage
+export default useLocalStorage;

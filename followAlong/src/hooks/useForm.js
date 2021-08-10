@@ -3,7 +3,7 @@ import useLocalStorage from "../components/useLocalStorage";
 // Custom hook to manage all state for a form with an arbitrary (n) number of inputs
 const useForm = (initialValues) => {
   // represent state as an object, which will allow us to easily handle all possibilities
-  const [values, setValues] = useLocalStorage(initialValues);
+  const [values, setValues] = useLocalStorage('formValues', initialValues);
 
   const handleChanges = e => {
     // Change the value for the input in which the user typed

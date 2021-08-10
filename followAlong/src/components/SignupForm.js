@@ -28,7 +28,8 @@ export default function SignupForm() {
   const classes = useStyles();
   const initialValues = {
     firstName: "",
-    lastName: ""
+    lastName: "",
+    email: ""
   }
 
   // call custom hook here instead of useState
@@ -39,7 +40,7 @@ export default function SignupForm() {
   // Keep this here rather than in useForm, because each form in our app will have different submit behaivor and we want the useForm hook to be as reusable as possible.
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${values.firstName} ${values.lastName}`);
+    alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 
   return (

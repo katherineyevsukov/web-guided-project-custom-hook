@@ -7,7 +7,7 @@ const useLocalStorage = (key, initialValue) => {
   // When initializing, check local storage for the value. If it's there, use it to initialize. Otherwise, use initialValue
   const [value, setValue] = useState(() => {
     if (localStorage.getItem(key)) {
-      return localStorage.getItem(key);
+      return JSON.parse(localStorage.getItem(key));
     }
     else {
       return initialValue;
@@ -18,7 +18,7 @@ const useLocalStorage = (key, initialValue) => {
   // Do this by "composing" setValue into a new function that sets the value and local storage
   const setValueAndLocalStorage = (newValue) => {
     setValue(newValue);
-    localStorage.setItem(key, newValue);
+    localStorage.setItem(key, JSON.stringify(newValue));
   }
 
   return [value, setValueAndLocalStorage];

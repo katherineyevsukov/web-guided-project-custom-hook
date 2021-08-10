@@ -1,12 +1,7 @@
 import { useState } from "react";
 
 // Custom hook to manage all state for a form with an arbitrary (n) number of inputs
-const useForm = () => {
-
-  const initialValues = {
-    firstName: "",
-    lastName: ""
-  }
+const useForm = (initialValues) => {
   // represent state as an object, which will allow us to easily handle all possibilities
   const [values, setValues] = useState(initialValues);
 

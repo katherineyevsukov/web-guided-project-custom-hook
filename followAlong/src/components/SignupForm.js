@@ -30,8 +30,9 @@ export default function SignupForm() {
     firstName: "",
     lastName: ""
   }
+
   // call custom hook here instead of useState
-  const [values, handleChanges, clearForm] = useForm("");
+  const [values, handleChanges, clearForm] = useForm(initialValues);
 
   const [lastName, handleLastNameChanges, clearLastForm] = useForm("");
 

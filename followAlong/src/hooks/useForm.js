@@ -7,7 +7,7 @@ const useForm = (initialValues) => {
 
   const handleChanges = e => {
     // Change the value for the input in which the user typed
-    console.log("An event target!", e.target);
+    console.log("User typed in input:", e.target.name);
     // setValues({
     //   ...values,
     //   firstName: e.target.value

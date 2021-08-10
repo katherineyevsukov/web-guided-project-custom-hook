@@ -27,6 +27,8 @@ export default function SignupForm() {
   // call custom hook here instead of useState
   const [firstName, handleChanges, clearForm] = useForm("");
 
+  const [lastName, handleLastNameChanges, clearLastForm] = useForm("");
+
   // Keep this here rather than in useForm, because each form in our app will have different submit behaivor and we want the useForm hook to be as reusable as possible.
   const handleSubmit = e => {
     e.preventDefault();

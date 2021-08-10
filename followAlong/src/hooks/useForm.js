@@ -4,3 +4,5 @@ const useForm = () => {
 
   return "something";
 }
+
+export default useForm;

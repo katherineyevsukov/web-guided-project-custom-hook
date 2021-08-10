@@ -8,10 +8,10 @@ const useForm = (initialValues) => {
   const handleChanges = e => {
     // Change the value for the input in which the user typed
     console.log("User typed in input:", e.target.name);
-    // setValues({
-    //   ...values,
-    //   firstName: e.target.value
-    // });
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    });
   };
 
   const clearForm = e => {

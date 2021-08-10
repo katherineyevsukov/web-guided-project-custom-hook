@@ -27,7 +27,7 @@ export default function SignupForm() {
   // call custom hook here instead of useState
   const [firstName, handleChanges, clearForm] = useForm("");
 
-
+  // Keep this here rather than in useForm, because each form in our app will have different submit behaivor and we want the useForm hook to be as reusable as possible.
   const handleSubmit = e => {
     e.preventDefault();
     alert(firstName);
@@ -44,6 +44,16 @@ export default function SignupForm() {
             className={classes.textField}
             name="firstName"
             value={firstName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="lastName"
+            value={lastName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"

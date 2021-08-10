@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// Custom hook to manage all state for a form with an arbitrary number of inputs
+// Custom hook to manage all state for a form with an arbitrary (n) number of inputs
 const useForm = () => {
   const [firstName, setFirstName] = useState("");
 

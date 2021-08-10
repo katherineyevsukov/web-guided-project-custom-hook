@@ -15,6 +15,11 @@ const useLocalStorage = (initialValue) => {
   });
 
   // When updating state, also update local storage
+  // Do this by "composing" setValue into a new function that sets the value and local storage
+  const setValueAndLocalStorage = () => {
+
+  }
+
   return [value, setValue];
 }
 

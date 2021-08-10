@@ -32,7 +32,7 @@ export default function SignupForm() {
   // Keep this here rather than in useForm, because each form in our app will have different submit behaivor and we want the useForm hook to be as reusable as possible.
   const handleSubmit = e => {
     e.preventDefault();
-    alert(firstName);
+    alert(`${firstName} ${lastName}`);
   };
 
   return (
@@ -56,7 +56,7 @@ export default function SignupForm() {
             className={classes.textField}
             name="lastName"
             value={lastName}
-            onChange={handleChanges}
+            onChange={handleLastNameChanges}
             margin="normal"
             variant="outlined"
           />

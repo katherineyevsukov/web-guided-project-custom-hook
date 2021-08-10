@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 import Button from "../theme/Button";
+import useForm from "../hooks/useForm";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 export default function SignupForm() {
   const classes = useStyles();
   // call custom hook here instead of useState
-  const [firstName, setFirstName] = useState("");
+  const [firstName, setFirstName] = useForm("");
 
   const handleChanges = e => {
     setFirstName(e.target.value);

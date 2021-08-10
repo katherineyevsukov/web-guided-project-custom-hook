@@ -17,3 +17,6 @@ const useForm = () => {
 }
 
 export default useForm;
+
+// O(n) complexity: for n form inputs, n function calls
+// O(1) complexity is what we want: for n form inputs, 1 function call!

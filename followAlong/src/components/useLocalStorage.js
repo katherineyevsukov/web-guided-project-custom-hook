@@ -4,7 +4,12 @@
 import { useState } from "react";
 
 const useLocalStorage = (initialValue) => {
-    const [value, setValue] = useState(initialValue);
+    // When initializing, check local storage for the value. If it's there, use it to initialize. Otherwise, use initialValue
+    const [value, setValue] = useState(() => {
+        return initialValue;
+    });
+
+    // When updating state, also update local storage
     return [value, setValue];
 }
 

@@ -6,6 +6,7 @@ const useForm = () => {
   const [values, setValues] = useState("");
 
   const handleChanges = e => {
+    // Change the value for the input in which the user typed
     setFirstName(e.target.value);
   };
 
@@ -14,7 +15,7 @@ const useForm = () => {
     setFirstName("");
   };
 
-  return [firstName, handleChanges, clearForm];
+  return [values, handleChanges, clearForm];
 }
 
 export default useForm;

@@ -8,7 +8,7 @@ const useForm = () => {
     lastName: ""
   }
   // represent state as an object, which will allow us to easily handle all possibilities
-  const [values, setValues] = useState("");
+  const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
     // Change the value for the input in which the user typed

@@ -22,10 +22,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
+
 export default function SignupForm() {
   const classes = useStyles();
   // call custom hook here instead of useState
-  const [firstName, handleChanges, clearForm] = useForm("");
+  const [values, handleChanges, clearForm] = useForm("");
 
   const [lastName, handleLastNameChanges, clearLastForm] = useForm("");
 
@@ -45,7 +47,7 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             name="firstName"
-            value={firstName}
+            value={values.firstName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
@@ -55,8 +57,8 @@ export default function SignupForm() {
             label="Last Name"
             className={classes.textField}
             name="lastName"
-            value={lastName}
-            onChange={handleLastNameChanges}
+            value={values.lastName}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
           />
